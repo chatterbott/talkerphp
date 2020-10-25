@@ -51,7 +51,7 @@ class Bot {
         foreach ($dictionary as $dict => $value) {
             $setB = $tok->tokenize(trim(strtolower($dict)));
             $sim = $J->similarity($setA, $setB);
-            if ($max >= 0.5) {
+            if ($max >= 0.35) {
                 if ($sim == $max) {
                     return $value;
                 }
