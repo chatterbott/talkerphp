@@ -141,7 +141,7 @@ class BotHelper {
             $arr = [];
             if ($resultSet != null) {
                 foreach ($resultSet as $result) {
-                    $arr[$result['question']] = $result['answer'];
+                    $arr[$result[$questionCol]] = $result[$answerCol];
                 }
                 return $arr;
             } else {
